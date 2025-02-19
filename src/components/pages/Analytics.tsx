@@ -22,6 +22,7 @@ export default function Analytics() {
         label: 'Active Users',
         data: [1200, 1900, 2300, 2800, 2400, 2900],
         borderColor: '#6366f1',
+        backgroundColor: '#6366f1',
         tension: 0.4,
       },
     ],
@@ -45,7 +46,7 @@ export default function Analytics() {
           <CardHeader>
             <CardTitle>Revenue Overview</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-4">
             <BarChart data={barChartData} />
           </CardContent>
         </Card>
@@ -54,7 +55,7 @@ export default function Analytics() {
           <CardHeader>
             <CardTitle>User Growth</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-4">
             <LineChart data={lineChartData} />
           </CardContent>
         </Card>
