@@ -3,7 +3,6 @@ import { BarChart, LineChart } from "@/components/ui/chart"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function Analytics() {
-  // Sample data for charts
   const barChartData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
@@ -22,7 +21,7 @@ export default function Analytics() {
         label: 'Active Users',
         data: [1200, 1900, 2300, 2800, 2400, 2900],
         borderColor: '#6366f1',
-        backgroundColor: '#6366f1',
+        backgroundColor: 'rgba(99, 102, 241, 0.1)',
         tension: 0.4,
       },
     ],
@@ -46,8 +45,10 @@ export default function Analytics() {
           <CardHeader>
             <CardTitle>Revenue Overview</CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
-            <BarChart data={barChartData} />
+          <CardContent>
+            <div className="h-[300px]">
+              <BarChart data={barChartData} />
+            </div>
           </CardContent>
         </Card>
 
@@ -55,8 +56,10 @@ export default function Analytics() {
           <CardHeader>
             <CardTitle>User Growth</CardTitle>
           </CardHeader>
-          <CardContent className="pt-4">
-            <LineChart data={lineChartData} />
+          <CardContent>
+            <div className="h-[300px]">
+              <LineChart data={lineChartData} />
+            </div>
           </CardContent>
         </Card>
       </div>
